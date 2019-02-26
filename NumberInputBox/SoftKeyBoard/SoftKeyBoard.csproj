@@ -1,0 +1,922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEFCCF98-E73D-4940-A207-A8EDC54283C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SoftKeyBoard</RootNamespace>
+    <AssemblyName>SoftKeyBoard</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\Public\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\#_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\#_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%40_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%40_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9蓝框.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\h_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\h_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputEasy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputEasy.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\j_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\j_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k4-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\n_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\n_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\O_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\O_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\q_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\q_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\U_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\U_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\u_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\u_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Y_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Y_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Z_大写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Z_大写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z_小写标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z_小写激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字1_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字1_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字2_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字2_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字3_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字3_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字4_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字4_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字5_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字5_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字6_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字6_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字7_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字7_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字8_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字8_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字9_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备选字9_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背版_手写.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背版_手写备选字.bak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背版_手写备选字.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背版_手写备选字bak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背版_数字符号键盘.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背版_小键盘.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背版_英文键盘.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\叉_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\叉_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\大小写_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\大小写_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\底.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\底p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\逗号_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\逗号_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方向右_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方向右_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方向左_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方向左_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空格_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空格_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键1_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键1_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键2_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键2_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键3_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键3_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键4_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键4_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键5_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键5_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键6_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键6_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键7_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键7_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键8_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键8_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键9_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空键9_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\且_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\且_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上一页_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上一页_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\手写_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\手写_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\数字符号_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\数字符号_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\完成.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\完成_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\完成_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\完成_小键盘标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\完成_小键盘激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\完成p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下一页_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下一页_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\英文_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\英文_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\右括号_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\右括号_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\中横线_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\中横线_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左括号_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左括号_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左撇_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左撇_激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\取消_标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0w_数字标准.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0w_数字激活.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\取消_激活.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
