@@ -1,6 +1,6 @@
 # C# SoftKeyboard
 
-C# 具有软键盘输入框，功能包括但不限于在工控机触屏上替代普通的 InputBox 。
+C# 软键盘输入框，功能包括但不限于在工控机触屏上替代普通的 InputBox 。
 
 ## 版本一：NumberInputBox
 
